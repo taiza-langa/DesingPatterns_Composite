@@ -1,18 +1,7 @@
-## Getting Started
+<h1>Desing Patterns - Estrutural (Composite)</h1>
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+O código implementa o padrão de projeto Composite, usado para trabalhar com estruturas hierárquicas, como árvores, de forma uniforme. Ele define a interface FileSystemComponent com o método display(String indent), comum a todos os componentes.
 
-## Folder Structure
+A classe File representa objetos simples (arquivos) e exibe seu nome. Já a classe Directory representa objetos compostos (diretórios), que podem conter outros arquivos ou subdiretórios, armazenados em uma lista. O método display exibe o nome do diretório e, recursivamente, seus conteúdos.
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Na classe App, é criada uma estrutura hierárquica de diretórios e arquivos, e o método display do diretório raiz é chamado para exibir toda a estrutura.
